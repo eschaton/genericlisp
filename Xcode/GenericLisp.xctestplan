@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "CCD9AFA8-C015-45C0-A101-27E96323CF0F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:GenericLisp.xcodeproj",
+      "identifier" : "9F20EC1F2ADB69840054F720",
+      "name" : "genericlisp"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:GenericLisp.xcodeproj",
+        "identifier" : "9F5B07CC2AC2497200539D4F",
+        "name" : "GenericLispTests"
+      }
+    }
+  ],
+  "version" : 1
+}

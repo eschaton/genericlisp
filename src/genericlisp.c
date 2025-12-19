@@ -16,6 +16,7 @@
 
 #if LISP_BUILD_AS_LIBRARY
 #define main genericlisp_main
+LISP_EXTERN int genericlisp_main(int argc, char **argv);
 #endif
 
 

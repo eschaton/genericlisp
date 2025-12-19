@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 90;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F043AD92ACB73F20048B5B6 /* TestGenericLispEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F043AD82ACB73F20048B5B6 /* TestGenericLispEnvironment.m */; };
+		9F043ADB2ACB74700048B5B6 /* TestGenericLispPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F043ADA2ACB74700048B5B6 /* TestGenericLispPlist.m */; };
+		9F20EC292ADB6A120054F720 /* libgenericlisp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F93F4942AD27E8D00A4DD0F /* libgenericlisp.dylib */; };
+		9F5B07D32AC2497200539D4F /* GenericLispTestCase.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B07D22AC2497200539D4F /* GenericLispTestCase.h */; };
+		9F5B08002AC24BC700539D4F /* GenericLispTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B07FF2AC24BC700539D4F /* GenericLispTestCase.m */; };
+		9F93F48F2AD1632A00A4DD0F /* TestGenericLispAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93F48E2AD1632A00A4DD0F /* TestGenericLispAtom.m */; };
+		9FBBF35A2AC96638002DB50B /* TestGenericLispStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBBF3592AC96638002DB50B /* TestGenericLispStream.m */; };
+		9FC5D2A32AC8EFD10030270A /* TestGenericLispCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D2A22AC8EFD10030270A /* TestGenericLispCell.m */; };
+		9FC5D2A52AC8F0770030270A /* TestGenericLispFixnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D2A42AC8F0770030270A /* TestGenericLispFixnum.m */; };
+		9FC5D2A72AC8F0800030270A /* TestGenericLispString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D2A62AC8F0800030270A /* TestGenericLispString.m */; };
+		9FC5D2A92AC8F0FC0030270A /* TestGenericLispChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D2A82AC8F0FC0030270A /* TestGenericLispChar.m */; };
+		9FD783242EF5103200A3498A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD783232EF5103200A3498A /* main.m */; };
+		9FFC0B4F2AD39C4B00DD20C5 /* libgenericlisp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F93F4942AD27E8D00A4DD0F /* libgenericlisp.dylib */; };
+		9FFF979E2ADA554600E42126 /* TestGenericLispEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF979D2ADA554600E42126 /* TestGenericLispEvaluation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F93F4B92AD27ECF00A4DD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F5B07BC2AC2497200539D4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F93F4932AD27E8D00A4DD0F;
+			remoteInfo = libgenericlisp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F20EC1E2ADB69840054F720 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolder = None;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9F043AD82ACB73F20048B5B6 /* TestGenericLispEnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispEnvironment.m; sourceTree = "<group>"; };
+		9F043ADA2ACB74700048B5B6 /* TestGenericLispPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispPlist.m; sourceTree = "<group>"; };
+		9F20EC202ADB69840054F720 /* genericlisp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = genericlisp; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4723AF2AF708CD001DEC83 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		9F4723B02AF708DD001DEC83 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		9F4723B12AF708DD001DEC83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9F4D78E92ADCBF310099CCC6 /* GenericLisp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GenericLisp.xctestplan; sourceTree = "<group>"; };
+		9F5B07CD2AC2497200539D4F /* GenericLispTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenericLispTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F5B07D22AC2497200539D4F /* GenericLispTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericLispTestCase.h; sourceTree = "<group>"; };
+		9F5B07FF2AC24BC700539D4F /* GenericLispTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericLispTestCase.m; sourceTree = "<group>"; };
+		9F93F48E2AD1632A00A4DD0F /* TestGenericLispAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispAtom.m; sourceTree = "<group>"; };
+		9F93F4942AD27E8D00A4DD0F /* libgenericlisp.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgenericlisp.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FBBF3592AC96638002DB50B /* TestGenericLispStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispStream.m; sourceTree = "<group>"; };
+		9FC5D2A22AC8EFD10030270A /* TestGenericLispCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispCell.m; sourceTree = "<group>"; };
+		9FC5D2A42AC8F0770030270A /* TestGenericLispFixnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispFixnum.m; sourceTree = "<group>"; };
+		9FC5D2A62AC8F0800030270A /* TestGenericLispString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispString.m; sourceTree = "<group>"; };
+		9FC5D2A82AC8F0FC0030270A /* TestGenericLispChar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispChar.m; sourceTree = "<group>"; };
+		9FD783232EF5103200A3498A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9FFF979D2ADA554600E42126 /* TestGenericLispEvaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispEvaluation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9F7BE2742EF50760001E2E88 /* src */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F20EC1D2ADB69840054F720 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				9F20EC292ADB6A120054F720 /* libgenericlisp.dylib in Frameworks */,
+			);
+		};
+		9F5B07CA2AC2497200539D4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				9FFC0B4F2AD39C4B00DD20C5 /* libgenericlisp.dylib in Frameworks */,
+			);
+		};
+		9F93F4922AD27E8D00A4DD0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F5B07BB2AC2497200539D4F = {
+			isa = PBXGroup;
+			children = (
+				9FD783232EF5103200A3498A /* main.m */,
+				9F4D78E92ADCBF310099CCC6 /* GenericLisp.xctestplan */,
+				9F5B07C72AC2497200539D4F /* GenericLisp */,
+				9F5B07D12AC2497200539D4F /* GenericLispTests */,
+				9F5B07C62AC2497200539D4F /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		9F5B07C62AC2497200539D4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B07CD2AC2497200539D4F /* GenericLispTests.xctest */,
+				9F93F4942AD27E8D00A4DD0F /* libgenericlisp.dylib */,
+				9F20EC202ADB69840054F720 /* genericlisp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F5B07C72AC2497200539D4F /* GenericLisp */ = {
+			isa = PBXGroup;
+			children = (
+				9F4723AF2AF708CD001DEC83 /* COPYING */,
+				9F4723B12AF708DD001DEC83 /* README.md */,
+				9F4723B02AF708DD001DEC83 /* TODO.md */,
+				9F7BE2742EF50760001E2E88 /* src */,
+			);
+			name = GenericLisp;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		9F5B07D12AC2497200539D4F /* GenericLispTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B07D22AC2497200539D4F /* GenericLispTestCase.h */,
+				9F5B07FF2AC24BC700539D4F /* GenericLispTestCase.m */,
+				9F93F48E2AD1632A00A4DD0F /* TestGenericLispAtom.m */,
+				9FC5D2A22AC8EFD10030270A /* TestGenericLispCell.m */,
+				9FC5D2A82AC8F0FC0030270A /* TestGenericLispChar.m */,
+				9F043AD82ACB73F20048B5B6 /* TestGenericLispEnvironment.m */,
+				9FFF979D2ADA554600E42126 /* TestGenericLispEvaluation.m */,
+				9FC5D2A42AC8F0770030270A /* TestGenericLispFixnum.m */,
+				9F043ADA2ACB74700048B5B6 /* TestGenericLispPlist.m */,
+				9FBBF3592AC96638002DB50B /* TestGenericLispStream.m */,
+				9FC5D2A62AC8F0800030270A /* TestGenericLispString.m */,
+			);
+			name = GenericLispTests;
+			path = ../tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9F20EC252ADB69950054F720 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			files = (
+			);
+		};
+		9F5B08012AC24BFB00539D4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			files = (
+			);
+		};
+		9F93F4902AD27E8D00A4DD0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			files = (
+			);
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9F20EC1F2ADB69840054F720 /* genericlisp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F20EC242ADB69840054F720 /* Build configuration list for PBXNativeTarget "genericlisp" */;
+			buildPhases = (
+				9F20EC252ADB69950054F720 /* Headers */,
+				9F20EC1C2ADB69840054F720 /* Sources */,
+				9F20EC1D2ADB69840054F720 /* Frameworks */,
+				9F20EC1E2ADB69840054F720 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			name = genericlisp;
+			productName = genericlisp;
+			productReference = 9F20EC202ADB69840054F720 /* genericlisp */;
+			productType = "com.apple.product-type.tool";
+		};
+		9F5B07CC2AC2497200539D4F /* GenericLispTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F5B07DA2AC2497200539D4F /* Build configuration list for PBXNativeTarget "GenericLispTests" */;
+			buildPhases = (
+				9F5B08012AC24BFB00539D4F /* Headers */,
+				9F5B07C92AC2497200539D4F /* Sources */,
+				9F5B07CA2AC2497200539D4F /* Frameworks */,
+				9F5B07CB2AC2497200539D4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F93F4BA2AD27ECF00A4DD0F /* PBXTargetDependency */,
+			);
+			name = GenericLispTests;
+			productName = GenericLispTests;
+			productReference = 9F5B07CD2AC2497200539D4F /* GenericLispTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F93F4932AD27E8D00A4DD0F /* libgenericlisp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F93F4952AD27E8D00A4DD0F /* Build configuration list for PBXNativeTarget "libgenericlisp" */;
+			buildPhases = (
+				9F93F4902AD27E8D00A4DD0F /* Headers */,
+				9F93F4912AD27E8D00A4DD0F /* Sources */,
+				9F93F4922AD27E8D00A4DD0F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				9F7BE2742EF50760001E2E88 /* src */,
+			);
+			name = libgenericlisp;
+			productName = libgenericlisp;
+			productReference = 9F93F4942AD27E8D00A4DD0F /* libgenericlisp.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F5B07BC2AC2497200539D4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2620;
+				ORGANIZATIONNAME = "Christopher M. Hanson";
+				TargetAttributes = {
+					9F20EC1F2ADB69840054F720 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					9F5B07CC2AC2497200539D4F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					9F93F4932AD27E8D00A4DD0F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 9F5B07BF2AC2497200539D4F /* Build configuration list for PBXProject "GenericLisp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F5B07BB2AC2497200539D4F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 90;
+			productRefGroup = 9F5B07C62AC2497200539D4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F93F4932AD27E8D00A4DD0F /* libgenericlisp */,
+				9F5B07CC2AC2497200539D4F /* GenericLispTests */,
+				9F20EC1F2ADB69840054F720 /* genericlisp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F5B07CB2AC2497200539D4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F20EC1C2ADB69840054F720 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				9FD783242EF5103200A3498A /* main.m in Sources */,
+			);
+		};
+		9F5B07C92AC2497200539D4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				9FC5D2A72AC8F0800030270A /* TestGenericLispString.m in Sources */,
+				9FFF979E2ADA554600E42126 /* TestGenericLispEvaluation.m in Sources */,
+				9F043AD92ACB73F20048B5B6 /* TestGenericLispEnvironment.m in Sources */,
+				9F93F48F2AD1632A00A4DD0F /* TestGenericLispAtom.m in Sources */,
+				9F5B07D32AC2497200539D4F /* GenericLispTestCase.h in Sources */,
+				9FBBF35A2AC96638002DB50B /* TestGenericLispStream.m in Sources */,
+				9FC5D2A92AC8F0FC0030270A /* TestGenericLispChar.m in Sources */,
+				9FC5D2A32AC8EFD10030270A /* TestGenericLispCell.m in Sources */,
+				9F5B08002AC24BC700539D4F /* GenericLispTestCase.m in Sources */,
+				9F043ADB2ACB74700048B5B6 /* TestGenericLispPlist.m in Sources */,
+				9FC5D2A52AC8F0770030270A /* TestGenericLispFixnum.m in Sources */,
+			);
+		};
+		9F93F4912AD27E8D00A4DD0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F93F4BA2AD27ECF00A4DD0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F93F4932AD27E8D00A4DD0F /* libgenericlisp */;
+			targetProxy = 9F93F4B92AD27ECF00A4DD0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9F20EC222ADB69840054F720 /* Debug configuration for PBXNativeTarget "genericlisp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9F20EC232ADB69840054F720 /* Release configuration for PBXNativeTarget "genericlisp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9F5B07D52AC2497200539D4F /* Debug configuration for PBXProject "GenericLisp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"LISP_USE_STDLIB=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9F5B07D62AC2497200539D4F /* Release configuration for PBXProject "GenericLisp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"LISP_USE_STDLIB=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9F5B07DB2AC2497200539D4F /* Debug configuration for PBXNativeTarget "GenericLispTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4FN2V327V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.eschatologist.GenericLispTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Debug;
+		};
+		9F5B07DC2AC2497200539D4F /* Release configuration for PBXNativeTarget "GenericLispTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4FN2V327V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.eschatologist.GenericLispTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Release;
+		};
+		9F93F4962AD27E8D00A4DD0F /* Debug configuration for PBXNativeTarget "libgenericlisp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4FN2V327V;
+				ENABLE_MODULE_VERIFIER = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"LISP_BUILD_AS_LIBRARY=1",
+					"$(inherited)",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_NAME = genericlisp;
+			};
+			name = Debug;
+		};
+		9F93F4972AD27E8D00A4DD0F /* Release configuration for PBXNativeTarget "libgenericlisp" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4FN2V327V;
+				ENABLE_MODULE_VERIFIER = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"LISP_BUILD_AS_LIBRARY=1",
+					"$(inherited)",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_NAME = genericlisp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F20EC242ADB69840054F720 /* Build configuration list for PBXNativeTarget "genericlisp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F20EC222ADB69840054F720 /* Debug configuration for PBXNativeTarget "genericlisp" */,
+				9F20EC232ADB69840054F720 /* Release configuration for PBXNativeTarget "genericlisp" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		9F5B07BF2AC2497200539D4F /* Build configuration list for PBXProject "GenericLisp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F5B07D52AC2497200539D4F /* Debug configuration for PBXProject "GenericLisp" */,
+				9F5B07D62AC2497200539D4F /* Release configuration for PBXProject "GenericLisp" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		9F5B07DA2AC2497200539D4F /* Build configuration list for PBXNativeTarget "GenericLispTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F5B07DB2AC2497200539D4F /* Debug configuration for PBXNativeTarget "GenericLispTests" */,
+				9F5B07DC2AC2497200539D4F /* Release configuration for PBXNativeTarget "GenericLispTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		9F93F4952AD27E8D00A4DD0F /* Build configuration list for PBXNativeTarget "libgenericlisp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F93F4962AD27E8D00A4DD0F /* Debug configuration for PBXNativeTarget "libgenericlisp" */,
+				9F93F4972AD27E8D00A4DD0F /* Release configuration for PBXNativeTarget "libgenericlisp" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F5B07BC2AC2497200539D4F /* Project object */;
+}
