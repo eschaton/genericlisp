@@ -1,3 +1,5 @@
 genericlisp
 *.o
 *.core
+*.dSYM
+do_check_*
