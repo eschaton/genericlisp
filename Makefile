@@ -48,12 +48,21 @@ OBJECTS = \
 		  $(OBJDIR)/lisp_built_in_streams.o \
 		  $(OBJDIR)/lisp_built_in_subrs.o
 
-CHECK_PREFIX = /opt/local
-CHECK_INCLUDE_PATH = $(CHECK_PREFIX)/include
-CHECK_LIB_PATH = $(CHECK_PREFIX)/lib
+PKG_CONFIG = $(shell which pkg-config)
+CHECK_CFLAGS = $(shell $(PKG_CONFIG) --cflags check)
+CHECK_LDFLAGS = $(shell $(PKG_CONFIG) --libs check)
 
-CHECK_CFLAGS = -I$(CHECK_INCLUDE_PATH)
-CHECK_LDFLAGS = -L$(CHECK_LIB_PATH) -lcheck
+TSTOBJS = \
+		$(OBJDIR)/check_atom.to \
+		$(OBJDIR)/check_cell.to \
+		$(OBJDIR)/check_char.to \
+		$(OBJDIR)/check_environment.to \
+		$(OBJDIR)/check_evaluation.to \
+		$(OBJDIR)/check_fixnum.to \
+		$(OBJDIR)/check_plist.to \
+		$(OBJDIR)/check_stream.to \
+		$(OBJDIR)/check_string.to \
+		$(OBJDIR)/tests_support.to
 
 TESTS = \
 		do_check_atom \
@@ -69,10 +78,13 @@ TESTS = \
 
 ### Build Rules
 
-.SUFFIXES: .c .o
+.SUFFIXES: .c .o .to
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
+
+$(OBJDIR)/%.to: $(TSTDIR)/%.c
+	$(CC) $(CLFLAGS) $(CPPFLAGS) $(CHECK_CFLAGS) -c -o $@ $<
 
 
 ### Primary Targets
@@ -83,82 +95,20 @@ all: $(OBJDIR) genericlisp
 clean:
 	$(RM) genericlisp $(OBJDIR)/genericlisp.o
 	$(RM) $(OBJECTS)
-	$(RM) $(OBJDIR)/tests_support.o
-	$(RM) $(TESTS)
+	$(RM) genericlisp_tests $(TSTOBJS)
 	$(RM) -r *.dSYM
 
 
-check: $(TESTS)
-	./do_check_atom
-	./do_check_cell
-	./do_check_char
-	./do_check_environment
-	./do_check_evaluation
-	./do_check_fixnum
-	./do_check_plist
-	./do_check_stream
-	./do_check_string
+check: genericlisp_tests $(TSTOBJS)
+	./genericlisp_tests
 
 
 genericlisp: $(OBJECTS) $(OBJDIR)/genericlisp.o
 	$(CC) -o $@ $(OBJECTS) $(OBJDIR)/genericlisp.o
 
 
-### Test Targets
-
-do_check_atom: $(TSTDIR)/check_atom.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
-
-do_check_cell: $(TSTDIR)/check_cell.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
-
-do_check_char: $(TSTDIR)/check_char.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
-
-do_check_environment: $(TSTDIR)/check_environment.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
-
-do_check_evaluation: $(TSTDIR)/check_evaluation.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
-
-do_check_fixnum: $(TSTDIR)/check_fixnum.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
-
-do_check_plist: $(TSTDIR)/check_plist.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
-
-do_check_stream: $(TSTDIR)/check_stream.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
-
-do_check_string: $(TSTDIR)/check_string.c $(OBJDIR)/tests_support.o $(OBJECTS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) \
-		$(CHECK_CFLAGS) $(CHECK_LDFLAGS) \
-		$(OBJDIR)/tests_support.o $(OBJECTS) \
-		-o $@ $<
+genericlisp_tests: $(OBJECTS) $(TSTOBJS)
+	$(CC) -o $@ $(CHECK_LDFLAGS) $(OBJECTS) $(TSTOBJS)
 
 
 ### Utility Targets
@@ -166,9 +116,6 @@ do_check_string: $(TSTDIR)/check_string.c $(OBJDIR)/tests_support.o $(OBJECTS)
 .PHONY: $(OBJDIR)
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
-
-$(OBJDIR)/tests_support.o: $(TSTDIR)/tests_support.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) $(CHECK_CFLAGS) -c -o $@ $<
 
 
 ### File Dependencies

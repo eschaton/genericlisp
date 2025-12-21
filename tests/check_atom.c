@@ -94,11 +94,3 @@ Suite *atom_suite(void)
 
     return s;
 }
-
-
-int main(int argc, char **argv)
-{
-    Suite *s = atom_suite();
-
-    return tests_main(argc, argv, s);
-}

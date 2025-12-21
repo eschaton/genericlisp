@@ -2,4 +2,5 @@ genericlisp
 *.o
 *.core
 *.dSYM
-do_check_*
+*.to
+genericlisp_tests

@@ -103,11 +103,3 @@ Suite *environment_suite(void)
 
     return s;
 }
-
-
-int main(int argc, char **argv)
-{
-    Suite *s = environment_suite();
-
-    return tests_main(argc, argv, s);
-}

@@ -149,11 +149,3 @@ Suite *fixnum_suite(void)
 
     return s;
 }
-
-
-int main(int argc, char **argv)
-{
-    Suite *s = fixnum_suite();
-
-    return tests_main(argc, argv, s);
-}

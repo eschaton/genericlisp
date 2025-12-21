@@ -36,7 +36,17 @@ LISP_EXTERN void tests_shared_setup(void);
 LISP_EXTERN void tests_shared_teardown(void);
 
 
-LISP_EXTERN int tests_main(int argc, char **argv, Suite *s);
+/* Test Suites */
+
+LISP_EXTERN Suite *atom_suite(void);
+LISP_EXTERN Suite *cell_suite(void);
+LISP_EXTERN Suite *char_suite(void);
+LISP_EXTERN Suite *environment_suite(void);
+LISP_EXTERN Suite *evaluation_suite(void);
+LISP_EXTERN Suite *fixnum_suite(void);
+LISP_EXTERN Suite *plist_suite(void);
+LISP_EXTERN Suite *stream_suite(void);
+LISP_EXTERN Suite *string_suite(void);
 
 
 #endif /* __tests_support__ */

@@ -251,11 +251,3 @@ Suite *cell_suite(void)
 
     return s;
 }
-
-
-int main(int argc, char **argv)
-{
-    Suite *s = cell_suite();
-
-    return tests_main(argc, argv, s);
-}

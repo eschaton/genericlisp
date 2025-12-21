@@ -275,9 +275,20 @@ void tests_clear_write_buffer(void)
 }
 
 
-int tests_main(int argc, char **argv, Suite *s)
+int main(int argc, char **argv)
 {
+    Suite *s = suite_create("genericlisp");
     SRunner *sr = srunner_create(s);
+
+    srunner_add_suite(sr, atom_suite());
+    srunner_add_suite(sr, cell_suite());
+    srunner_add_suite(sr, char_suite());
+    srunner_add_suite(sr, environment_suite());
+    srunner_add_suite(sr, evaluation_suite());
+    srunner_add_suite(sr, fixnum_suite());
+    srunner_add_suite(sr, plist_suite());
+    srunner_add_suite(sr, stream_suite());
+    srunner_add_suite(sr, string_suite());
 
     srunner_run_all(sr, CK_VERBOSE);
     int number_failed = srunner_ntests_failed(sr);
