@@ -7,20 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F043AD92ACB73F20048B5B6 /* TestGenericLispEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F043AD82ACB73F20048B5B6 /* TestGenericLispEnvironment.m */; };
-		9F043ADB2ACB74700048B5B6 /* TestGenericLispPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F043ADA2ACB74700048B5B6 /* TestGenericLispPlist.m */; };
+		9F154E3A2EFA53C3005762D7 /* libcheck.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F154E392EFA53C3005762D7 /* libcheck.0.dylib */; };
 		9F20EC292ADB6A120054F720 /* libgenericlisp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F93F4942AD27E8D00A4DD0F /* libgenericlisp.dylib */; };
-		9F5B07D32AC2497200539D4F /* GenericLispTestCase.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B07D22AC2497200539D4F /* GenericLispTestCase.h */; };
-		9F5B08002AC24BC700539D4F /* GenericLispTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B07FF2AC24BC700539D4F /* GenericLispTestCase.m */; };
-		9F93F48F2AD1632A00A4DD0F /* TestGenericLispAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93F48E2AD1632A00A4DD0F /* TestGenericLispAtom.m */; };
-		9FBBF35A2AC96638002DB50B /* TestGenericLispStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBBF3592AC96638002DB50B /* TestGenericLispStream.m */; };
-		9FC5D2A32AC8EFD10030270A /* TestGenericLispCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D2A22AC8EFD10030270A /* TestGenericLispCell.m */; };
-		9FC5D2A52AC8F0770030270A /* TestGenericLispFixnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D2A42AC8F0770030270A /* TestGenericLispFixnum.m */; };
-		9FC5D2A72AC8F0800030270A /* TestGenericLispString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D2A62AC8F0800030270A /* TestGenericLispString.m */; };
-		9FC5D2A92AC8F0FC0030270A /* TestGenericLispChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D2A82AC8F0FC0030270A /* TestGenericLispChar.m */; };
 		9FD783242EF5103200A3498A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD783232EF5103200A3498A /* main.m */; };
 		9FFC0B4F2AD39C4B00DD20C5 /* libgenericlisp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F93F4942AD27E8D00A4DD0F /* libgenericlisp.dylib */; };
-		9FFF979E2ADA554600E42126 /* TestGenericLispEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF979D2ADA554600E42126 /* TestGenericLispEvaluation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,31 +35,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9F043AD82ACB73F20048B5B6 /* TestGenericLispEnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispEnvironment.m; sourceTree = "<group>"; };
-		9F043ADA2ACB74700048B5B6 /* TestGenericLispPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispPlist.m; sourceTree = "<group>"; };
+		9F154E392EFA53C3005762D7 /* libcheck.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcheck.0.dylib; path = ../../../../../../../opt/local/lib/libcheck.0.dylib; sourceTree = "<group>"; };
 		9F20EC202ADB69840054F720 /* genericlisp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = genericlisp; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4723AF2AF708CD001DEC83 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		9F4723B02AF708DD001DEC83 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		9F4723B12AF708DD001DEC83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9F4D78E92ADCBF310099CCC6 /* GenericLisp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GenericLisp.xctestplan; sourceTree = "<group>"; };
 		9F5B07CD2AC2497200539D4F /* GenericLispTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenericLispTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F5B07D22AC2497200539D4F /* GenericLispTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericLispTestCase.h; sourceTree = "<group>"; };
-		9F5B07FF2AC24BC700539D4F /* GenericLispTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericLispTestCase.m; sourceTree = "<group>"; };
-		9F93F48E2AD1632A00A4DD0F /* TestGenericLispAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispAtom.m; sourceTree = "<group>"; };
 		9F93F4942AD27E8D00A4DD0F /* libgenericlisp.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgenericlisp.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FBBF3592AC96638002DB50B /* TestGenericLispStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispStream.m; sourceTree = "<group>"; };
-		9FC5D2A22AC8EFD10030270A /* TestGenericLispCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispCell.m; sourceTree = "<group>"; };
-		9FC5D2A42AC8F0770030270A /* TestGenericLispFixnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispFixnum.m; sourceTree = "<group>"; };
-		9FC5D2A62AC8F0800030270A /* TestGenericLispString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispString.m; sourceTree = "<group>"; };
-		9FC5D2A82AC8F0FC0030270A /* TestGenericLispChar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispChar.m; sourceTree = "<group>"; };
 		9FD783232EF5103200A3498A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9FFF979D2ADA554600E42126 /* TestGenericLispEvaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGenericLispEvaluation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9F7BE2742EF50760001E2E88 /* src */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = src;
+			sourceTree = "<group>";
+		};
+		9FC00B132EF908C200C94709 /* tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			name = tests;
+			path = ../tests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -85,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			files = (
 				9FFC0B4F2AD39C4B00DD20C5 /* libgenericlisp.dylib in Frameworks */,
+				9F154E3A2EFA53C3005762D7 /* libcheck.0.dylib in Frameworks */,
 			);
 		};
 		9F93F4922AD27E8D00A4DD0F /* Frameworks */ = {
@@ -95,13 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F154E382EFA53C3005762D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F154E392EFA53C3005762D7 /* libcheck.0.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F5B07BB2AC2497200539D4F = {
 			isa = PBXGroup;
 			children = (
 				9FD783232EF5103200A3498A /* main.m */,
 				9F4D78E92ADCBF310099CCC6 /* GenericLisp.xctestplan */,
 				9F5B07C72AC2497200539D4F /* GenericLisp */,
-				9F5B07D12AC2497200539D4F /* GenericLispTests */,
+				9FC00B132EF908C200C94709 /* tests */,
+				9F154E382EFA53C3005762D7 /* Frameworks */,
 				9F5B07C62AC2497200539D4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,25 +123,6 @@
 			);
 			name = GenericLisp;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		9F5B07D12AC2497200539D4F /* GenericLispTests */ = {
-			isa = PBXGroup;
-			children = (
-				9F5B07D22AC2497200539D4F /* GenericLispTestCase.h */,
-				9F5B07FF2AC24BC700539D4F /* GenericLispTestCase.m */,
-				9F93F48E2AD1632A00A4DD0F /* TestGenericLispAtom.m */,
-				9FC5D2A22AC8EFD10030270A /* TestGenericLispCell.m */,
-				9FC5D2A82AC8F0FC0030270A /* TestGenericLispChar.m */,
-				9F043AD82ACB73F20048B5B6 /* TestGenericLispEnvironment.m */,
-				9FFF979D2ADA554600E42126 /* TestGenericLispEvaluation.m */,
-				9FC5D2A42AC8F0770030270A /* TestGenericLispFixnum.m */,
-				9F043ADA2ACB74700048B5B6 /* TestGenericLispPlist.m */,
-				9FBBF3592AC96638002DB50B /* TestGenericLispStream.m */,
-				9FC5D2A62AC8F0800030270A /* TestGenericLispString.m */,
-			);
-			name = GenericLispTests;
-			path = ../tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +175,9 @@
 			);
 			dependencies = (
 				9F93F4BA2AD27ECF00A4DD0F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9FC00B132EF908C200C94709 /* tests */,
 			);
 			name = GenericLispTests;
 			productName = GenericLispTests;
@@ -282,17 +262,6 @@
 		9F5B07C92AC2497200539D4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				9FC5D2A72AC8F0800030270A /* TestGenericLispString.m in Sources */,
-				9FFF979E2ADA554600E42126 /* TestGenericLispEvaluation.m in Sources */,
-				9F043AD92ACB73F20048B5B6 /* TestGenericLispEnvironment.m in Sources */,
-				9F93F48F2AD1632A00A4DD0F /* TestGenericLispAtom.m in Sources */,
-				9F5B07D32AC2497200539D4F /* GenericLispTestCase.h in Sources */,
-				9FBBF35A2AC96638002DB50B /* TestGenericLispStream.m in Sources */,
-				9FC5D2A92AC8F0FC0030270A /* TestGenericLispChar.m in Sources */,
-				9FC5D2A32AC8EFD10030270A /* TestGenericLispCell.m in Sources */,
-				9F5B08002AC24BC700539D4F /* GenericLispTestCase.m in Sources */,
-				9F043ADB2ACB74700048B5B6 /* TestGenericLispPlist.m in Sources */,
-				9FC5D2A52AC8F0770030270A /* TestGenericLispFixnum.m in Sources */,
 			);
 		};
 		9F93F4912AD27E8D00A4DD0F /* Sources */ = {
@@ -460,6 +429,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V4FN2V327V;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.eschatologist.GenericLispTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -474,6 +445,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V4FN2V327V;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.eschatologist.GenericLispTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
