@@ -28,19 +28,6 @@ static uintptr_t lisp_heap_size = 0;
 /** Keep track of the current point in the Lisp heap, so we know where the next allocation comes from. */
 static void *lisp_heap_cur = NULL;
 
-/** The page size. */
-const uintptr_t lisp_page_size = 4096;
-
-/** The page shift (number of bits in the page size). */
-const uintptr_t lisp_page_shift = 12;
-
-/** The page mask (to get the page from an address). */
-#if __LP64__
-const uintptr_t lisp_page_mask = 0xFFFFFFFFFFFFF000;
-#else
-const uintptr_t lisp_page_mask = 0xFFFFF000;
-#endif
-
 
 /** Collect garbage. */
 static void lisp_heap_garbage_collect(void);
@@ -49,13 +36,30 @@ static void lisp_heap_garbage_collect(void);
 void lisp_heap_initialize(uintptr_t size)
 {
 #if LISP_USE_STDLIB
-    /* Assume page alignment from calloc. */
+    /*
+     It would be nice if we could assume 16-byte alignment from calloc, but
+     that's not actually guaranteed. So we have to do the alignment ourselves.
+     */
     raw_heap = calloc(size, sizeof(uint8_t));
+
+    const uintptr_t raw_heap_val = (uintptr_t)raw_heap;
+    void *raw_heap_aligned;
+    uintptr_t size_aligned;
+    if ((raw_heap_val & 0xF) == 0x0) {
+        raw_heap_aligned = raw_heap;
+        size_aligned = size;
+    } else {
+        const uintptr_t offset = raw_heap_val & 0xF;
+        const uintptr_t adjust = 0x10 - offset;
+        uintptr_t raw_heap_aligned_val = raw_heap_val + adjust;
+        raw_heap_aligned = (void *)raw_heap_aligned_val;
+        size_aligned = size - adjust;
+    }
 #else
 #warning Implement lisp_heap_initialize without stdlib.
 #endif
-    lisp_heap_start = raw_heap;
-    lisp_heap_size = size;
+    lisp_heap_start = raw_heap_aligned;
+    lisp_heap_size = size_aligned;
     lisp_heap_cur = lisp_heap_start;
 }
 
