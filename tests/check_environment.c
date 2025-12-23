@@ -94,6 +94,7 @@ Suite *environment_suite(void)
     TCase *tc_root_environment = tcase_create("Root");
     tcase_add_checked_fixture(tc_root_environment, tests_shared_setup, tests_shared_teardown);
     tcase_add_test(tc_root_environment, test_root_environment_creation);
+    tcase_add_test(tc_root_environment, test_root_environment_has_t);
     suite_add_tcase(s, tc_root_environment);
 
     TCase *tc_nested_environment = tcase_create("Nested");
