@@ -633,30 +633,66 @@ Suite *evaluation_suite(void)
     tcase_add_checked_fixture(tc_special_forms, tests_shared_setup, tests_shared_teardown);
     tcase_add_test(tc_special_forms, test_evaluating_QUOTE);
     tcase_add_test(tc_special_forms, test_evaluating_SET);
+    // TODO: Test SETQ
     tcase_add_test(tc_special_forms, test_evaluating_DEFINE);
     tcase_add_test(tc_special_forms, test_evaluating_IF);
     tcase_add_test(tc_special_forms, test_evaluating_LAMBDA);
     tcase_add_test(tc_special_forms, test_applying_LAMBDA);
     tcase_add_test(tc_special_forms, test_evaluating_LAMBDA_in_function_position);
     tcase_add_test(tc_special_forms, test_evaluating_BLOCK_without_return);
+    // TODO: Test RETURN-FROM
+    // TODO: Test RETURN
     tcase_add_test(tc_special_forms, test_evaluating_COND);
     tcase_add_test(tc_special_forms, test_evaluating_DEFUN);
+    tcase_add_test(tc_special_forms, test_evaluating_AND);
+    tcase_add_test(tc_special_forms, test_evaluating_AND_with_zero_arguments);
+    tcase_add_test(tc_special_forms, test_evaluating_OR);
+    tcase_add_test(tc_special_forms, test_evaluating_OR_with_zero_arguments);
+    // TODO: Test TAGBODY
+    // TODO: Test GO
     suite_add_tcase(s, tc_special_forms);
 
     TCase *tc_built_in_SUBRs = tcase_create("Built-in SUBRs");
     tcase_add_checked_fixture(tc_built_in_SUBRs, tests_shared_setup, tests_shared_teardown);
-    tcase_add_test(tc_built_in_SUBRs, test_evaluating_AND);
-    tcase_add_test(tc_built_in_SUBRs, test_evaluating_AND_with_zero_arguments);
-    tcase_add_test(tc_built_in_SUBRs, test_evaluating_OR);
-    tcase_add_test(tc_built_in_SUBRs, test_evaluating_OR_with_zero_arguments);
     tcase_add_test(tc_built_in_SUBRs, test_evaluating_CAR);
     tcase_add_test(tc_built_in_SUBRs, test_evaluating_CDR);
+    // TODO: Test CONS
+    // TODO: Test ATOM
+    // TODO: Test EQ
+    // TODO: Test EQUAL
+    // TODO: Test LIST
+    // TODO: Test NULL
+    // TODO: Test MEMBER
+    // TODO: Test LENGTH
+    // TODO: Test RPLCA
+    // TODO: Test RPLACD
+    // TODO: Test NOT
+    // TODO: Test NUMBERP
+    // TODO: Test ZEROP
+    // TODO: Test MINUSP
+    // TODO: Test LESS_THAN
+    // TODO: Test LESS_THAN_OR_EQUALS
+    // TODO: Test GREATER_THAN
+    // TODO: Test GREATER_THAN_OR_EQUALS
+    // TODO: Test EQUALS
     tcase_add_test(tc_built_in_SUBRs, test_evaluating_PLUS_with_two_arguments);
     tcase_add_test(tc_built_in_SUBRs, test_evaluating_PLUS_with_n_arguments);
     tcase_add_test(tc_built_in_SUBRs, test_evaluating_MINUS_with_one_positive_argument);
     tcase_add_test(tc_built_in_SUBRs, test_evaluating_MINUS_with_one_negative_argument);
     tcase_add_test(tc_built_in_SUBRs, test_evaluating_MINUS_with_two_arguments);
     tcase_add_test(tc_built_in_SUBRs, test_evaluating_MINUS_with_n_arguments);
+    // TODO: Test TIMES
+    // TODO: Test DIVIDE
+    // TODO: Test MODULO
+    // TODO: Test STRINGP
+    // TODO: Test STREAMP
+    // TODO: Test READ
+    // TODO: Test PRIN1
+    // TODO: Test PRINC
+    // TODO: Test PRINT
+    // TODO: Test TERPRI
+    // TODO: Test EVAL
+    // TODO: Test APPLY
     suite_add_tcase(s, tc_built_in_SUBRs);
 
     return s;
